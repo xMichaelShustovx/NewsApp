@@ -26,6 +26,26 @@ class ViewController: UIViewController {
         model.getArticles()
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Detect the indexpath the user selected
+        let indexPath = tableView.indexPathForSelectedRow
+        
+        guard indexPath != nil else {
+            // The user hasn't selected anything
+            return
+        }
+        
+        // Get the article the user tapped on
+        let article = articles[indexPath!.row]
+        
+        // Get a reference to the detail view controller
+        let detailVC = segue.destination as! DetailViewController
+        
+        // Pass the article url to the detail view controller
+        detailVC.articleUrl = article.url!
+    }
 }
 
 // MARK: - Table View Protocol Methods
@@ -49,6 +69,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+     
+        // User just selected a row, trigger the segue to go to detail
+        performSegue(withIdentifier: "goToDetail", sender: self)
         
     }
 }

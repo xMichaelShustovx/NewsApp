@@ -11,6 +11,8 @@ import WebKit
 class DetailViewController: UIViewController {
     
     @IBOutlet weak var webView: WKWebView!
+    
+    var articleUrl: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,15 +20,25 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        
+        // Check that there's a url
+        if articleUrl != nil {
+            
+            // Create URL object
+            let url = URL(string: articleUrl!)
+            
+            guard url != nil else {
+                print("Couldn't create url object")
+                return
+            }
+            
+            // Create the URLRequest object
+            let request = URLRequest(url: url!)
+            
+            // Load it in the webview
+            webView.load(request)
+            
+        }
     }
-    */
-
 }
