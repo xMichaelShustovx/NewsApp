@@ -27,8 +27,10 @@ class ViewController: UIViewController {
 extension ViewController: ArticleModelProtocol {
     
     func articlesRetrived(_ articles: [Article]) {
-        print("Articles returned from model")
+        
+        // Set the articles property of the view controller to the articles passed back from the model
+        self.articles = articles
+        
     }
     
 }
-
