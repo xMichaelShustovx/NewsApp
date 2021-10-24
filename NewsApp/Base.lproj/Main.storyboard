@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArticleCell" rowHeight="100" id="Mv0-Ka-gNd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArticleCell" rowHeight="100" id="Mv0-Ka-gNd" customClass="ArticleCell" customModule="NewsApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mv0-Ka-gNd" id="sTk-54-nuT">
@@ -33,7 +33,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SGo-FY-Gw4">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SGo-FY-Gw4">
                                                     <rect key="frame" x="290" y="0.0" width="124" height="100"/>
                                                 </imageView>
                                             </subviews>
@@ -50,6 +50,10 @@
                                             <constraint firstItem="SGo-FY-Gw4" firstAttribute="width" secondItem="Mv0-Ka-gNd" secondAttribute="width" multiplier="0.3" id="05e-nY-EEz"/>
                                             <constraint firstItem="wYr-XG-Pge" firstAttribute="width" secondItem="Mv0-Ka-gNd" secondAttribute="width" multiplier="0.7" constant="-40" id="SPT-Vd-KVh"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="articleImageView" destination="SGo-FY-Gw4" id="sTq-3k-1Ph"/>
+                                            <outlet property="headlineLabel" destination="wYr-XG-Pge" id="QJb-Sm-Q7I"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

@@ -17,6 +17,7 @@
 		5265060D27253E680098EA81 /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265060C27253E680098EA81 /* ArticleService.swift */; };
 		5265060F27253F170098EA81 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265060E27253F170098EA81 /* ArticleModel.swift */; };
 		52650611272550610098EA81 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52650610272550610098EA81 /* DetailViewController.swift */; };
+		526506132725594C0098EA81 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526506122725594C0098EA81 /* ArticleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5265060C27253E680098EA81 /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
 		5265060E27253F170098EA81 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		52650610272550610098EA81 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		526506122725594C0098EA81 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				526505F827253B500098EA81 /* SceneDelegate.swift */,
 				526505FA27253B500098EA81 /* ViewController.swift */,
 				52650610272550610098EA81 /* DetailViewController.swift */,
+				526506122725594C0098EA81 /* ArticleCell.swift */,
 				5265060E27253F170098EA81 /* ArticleModel.swift */,
 				5265060A27253BBC0098EA81 /* Article.swift */,
 				5265060C27253E680098EA81 /* ArticleService.swift */,
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				526506132725594C0098EA81 /* ArticleCell.swift in Sources */,
 				5265060D27253E680098EA81 /* ArticleService.swift in Sources */,
 				5265060B27253BBC0098EA81 /* Article.swift in Sources */,
 				526505FB27253B500098EA81 /* ViewController.swift in Sources */,
