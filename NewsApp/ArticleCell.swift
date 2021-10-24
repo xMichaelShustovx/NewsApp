@@ -19,13 +19,22 @@ class ArticleCell: UITableViewCell {
         
         // Clean up the cell before displaying the next article
         headlineLabel.text = ""
+        headlineLabel.alpha = 0
         articleImageView.image = nil
+        articleImageView.alpha = 0
         
         // Keep the reference to the article
         articleToDisplay = article
         
         // Set the headline
         headlineLabel.text = articleToDisplay!.title
+        
+        // Animate the label into view
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+            
+            self.headlineLabel.alpha = 1
+            
+        }, completion: nil)
         
         // Download and display the image
         
@@ -42,8 +51,15 @@ class ArticleCell: UITableViewCell {
             
             DispatchQueue.main.async {
                 self.articleImageView.image = UIImage(data: imageData)
+                
+                // Animate the image into view
+                UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+                    
+                    self.articleImageView.alpha = 1
+                    
+                }, completion: nil)
             }
-            
+
             return
         }
         
@@ -72,8 +88,14 @@ class ArticleCell: UITableViewCell {
                     DispatchQueue.main.async {
                         // Display the image data in the image view
                         self.articleImageView.image = UIImage(data: data!)
+                        
+                        // Animate the image into view
+                        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+                            
+                            self.articleImageView.alpha = 1
+                            
+                        }, completion: nil)
                     }
-                    
                 }
             }
         }

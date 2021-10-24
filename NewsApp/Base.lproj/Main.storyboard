@@ -93,18 +93,24 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ggu-39-Rr8">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="emN-8o-CeO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ggu-39-Rr8" firstAttribute="centerY" secondItem="G33-MU-99f" secondAttribute="centerY" id="B6c-zK-54R"/>
                             <constraint firstItem="hfn-mt-2nT" firstAttribute="top" secondItem="G33-MU-99f" secondAttribute="top" id="Ian-Vw-J2J"/>
                             <constraint firstAttribute="bottom" secondItem="hfn-mt-2nT" secondAttribute="bottom" id="WhH-tZ-zhh"/>
                             <constraint firstItem="hfn-mt-2nT" firstAttribute="leading" secondItem="G33-MU-99f" secondAttribute="leading" id="eM2-pf-XJ7"/>
                             <constraint firstAttribute="trailing" secondItem="hfn-mt-2nT" secondAttribute="trailing" id="xXS-OO-mac"/>
+                            <constraint firstItem="ggu-39-Rr8" firstAttribute="centerX" secondItem="G33-MU-99f" secondAttribute="centerX" id="xsx-Xy-jKV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g9A-r0-7xZ"/>
                     <connections>
+                        <outlet property="spinner" destination="ggu-39-Rr8" id="GOB-mU-eo9"/>
                         <outlet property="webView" destination="hfn-mt-2nT" id="CZ8-qA-0e2"/>
                     </connections>
                 </viewController>
